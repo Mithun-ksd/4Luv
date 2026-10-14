@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Create a personalized birthday wish." />
+
+    <title>Create a Birthday Wish — 4Luv</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A5%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/create.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <span class="logo-heart">♥</span>
+          4Luv
+        </a>
+
+        <a href="index.html" class="nav-button"> ← Home </a>
+      </nav>
+    </header>
+
+    <main class="create-page">
+      <div class="create-header">
+        <p class="eyebrow">Let's make something special</p>
+
+        <h1>Create Your Birthday Wish 🎂</h1>
+
+        <p>Personalize a little surprise for someone special.</p>
+      </div>
+
+      <div class="builder">
+        <!--  FORM  -->
+
+        <section class="builder-form">
+          <form id="wishForm">
+            <!-- Recipient -->
+
+            <div class="form-section">
+              <label for="recipientName">
+                Who is this birthday wish for? 💕
+              </label>
+
+              <input
+                type="text"
+                id="recipientName"
+                name="recipientName"
+                placeholder="Enter their name"
+                maxlength="50"
+                required
+              />
+
+              <small> This name will appear on the birthday page. </small>
+            </div>
+
+            <!-- Message -->
+
+            <div class="form-section">
+              <label for="message"> Write your birthday message 💌 </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                maxlength="500"
+                placeholder="Write something heartfelt..."
+                required
+              ></textarea>
+
+              <div class="character-count">
+                <span id="characterCount">0</span> / 500
+              </div>
+            </div>
+
+            <!-- Sender -->
+
+            <div class="form-section">
+              <label for="senderName"> Who is sending this? ❤️ </label>
+
+              <input
+                type="text"
+                id="senderName"
+                name="senderName"
+                placeholder="Your name"
+                maxlength="50"
+              />
+            </div>
+
+            <!-- Cake -->
+
+            <div class="form-section">
+              <label> Choose a cake 🎂 </label>
+
+              <div class="option-grid">
+                <label class="option-card">
+                  <input type="radio" name="cake" value="classic" checked />
+
+                  <span>🎂</span>
+                  <small>Classic</small>
+                </label>
+
+                <label class="option-card">
+                  <input type="radio" name="cake" value="cupcake" />
+
+                  <span>🧁</span>
+                  <small>Cupcake</small>
+                </label>
+
+                <label class="option-card">
+                  <input type="radio" name="cake" value="slice" />
+
+                  <span>🍰</span>
+                  <small>Slice</small>
+                </label>
+
+                <label class="option-card">
+                  <input type="radio" name="cake" value="pink" />
+
+                  <span>🎂</span>
+                  <small>Pink</small>
+                </label>
+
+                <label class="option-card">
+                  <input type="radio" name="cake" value="chocolate" />
+
+                  <span>🍫</span>
+                  <small>Chocolate</small>
+                </label>
+              </div>
+            </div>
+
+            <!-- Decorations -->
+
+            <div class="form-section">
+              <label> Add decorations ✨ </label>
+
+              <div class="checkbox-grid">
+                <label>
+                  <input type="checkbox" name="decorations" value="hearts" />
+                  💕 Hearts
+                </label>
+
+                <label>
+                  <input type="checkbox" name="decorations" value="balloons" />
+                  🎈 Balloons
+                </label>
+
+                <label>
+                  <input type="checkbox" name="decorations" value="confetti" />
+                  🎉 Confetti
+                </label>
+
+                <label>
+                  <input type="checkbox" name="decorations" value="sparkles" />
+                  ✨ Sparkles
+                </label>
+
+                <label>
+                  <input type="checkbox" name="decorations" value="gifts" />
+                  🎁 Gifts
+                </label>
+              </div>
+            </div>
+
+            <!-- Theme -->
+
+            <div class="form-section">
+              <label> Choose a theme 🌸 </label>
+
+              <select id="theme" name="theme">
+                <option value="sweet-pink">Sweet Pink</option>
+
+                <option value="party-pop">Party Pop</option>
+
+                <option value="dreamy">Dreamy</option>
+
+                <option value="love">Love</option>
+
+                <option value="classic">Classic Birthday</option>
+              </select>
+            </div>
+
+            <!-- URL -->
+
+            <div class="form-section">
+              <label for="slug"> Choose your personalized URL 🔗 </label>
+
+              <div class="url-input">
+                <span> wish.html?wish= </span>
+
+                <input
+                  type="text"
+                  id="slug"
+                  name="slug"
+                  placeholder="john"
+                  maxlength="30"
+                  required
+                />
+              </div>
+
+              <small id="slugMessage">
+                Use 3–30 lowercase letters, numbers or hyphens.
+              </small>
+            </div>
+
+            <button type="submit" class="primary-button create-button">
+              Create My Birthday Wish →
+            </button>
+          </form>
+        </section>
+
+        <!--  PREVIEW  -->
+
+        <aside class="preview-section">
+          <div class="preview-label">LIVE PREVIEW</div>
+
+          <div id="previewCard" class="preview-card">
+            <div id="previewDecorations">✨ 💕 ✨</div>
+
+            <p class="preview-small">Happy Birthday</p>
+
+            <h2 id="previewName">Your Name</h2>
+
+            <div id="previewCake" class="preview-cake">🎂</div>
+
+            <p id="previewMessage">Your birthday message will appear here...</p>
+
+            <p id="previewSender" class="preview-sender">With love ❤️</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made with ♥ for special people.</p>
+
+      <p>© 2026 4Luv</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/create.js"></script>
+  </body>
+</html>

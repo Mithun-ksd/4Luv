@@ -1,0 +1,23 @@
+# Environment files (this project doesn't use them, but never commit them)
+.env
+.env.*
+
+# Vercel
+.vercel/
+
+# Dependencies (if you add a build tool later)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Zip backups
+*.zip
