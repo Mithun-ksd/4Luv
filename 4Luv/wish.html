@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="A special birthday wish made with love."
+    />
+
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Happy Birthday! — 4Luv</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A5%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/wish.css" />
+  </head>
+
+  <body>
+    <main class="wish-page">
+      <!-- Deco -->
+
+      <div class="wish-decoration decoration-one">💕</div>
+
+      <div class="wish-decoration decoration-two">✨</div>
+
+      <div class="wish-decoration decoration-three">🎈</div>
+
+      <!-- Wish Card -->
+
+      <section class="wish-card">
+        <p class="wish-label">A special birthday message for</p>
+
+        <h1 id="recipientName">Loading...</h1>
+
+        <div id="decorations" class="wish-decorations"></div>
+
+        <!-- Cake -->
+
+        <div id="cake" class="wish-cake">🎂</div>
+
+        <div class="birthday-title">Happy Birthday! 🎉</div>
+
+        <!-- Message -->
+
+        <div class="message-container">
+          <p id="birthdayMessage">Opening your surprise...</p>
+        </div>
+
+        <!-- Sender -->
+
+        <p id="senderName" class="sender">With love ❤️</p>
+
+        <div class="wish-footer">
+          <span>
+            Made with
+            <strong>4Luv</strong>
+          </span>
+        </div>
+      </section>
+
+      <!-- Action -->
+
+      <div class="wish-action">
+        <button id="replayButton" class="replay-button">
+          ✨ Replay Celebration
+        </button>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/wish.js"></script>
+  </body>
+</html>

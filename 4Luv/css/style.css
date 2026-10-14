@@ -1,0 +1,701 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff8fa;
+  color: #52152d;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Variables */
+
+:root {
+  --pink: #f45b8a;
+  --dark-pink: #8b1745;
+  --light-pink: #ffe4ed;
+  --soft-pink: #fff1f5;
+  --white: #ffffff;
+  --text: #52152d;
+  --muted: #8c6876;
+
+  --shadow: 0 20px 50px rgba(139, 23, 69, 0.1);
+
+  --radius-large: 32px;
+  --radius-medium: 20px;
+}
+
+/* Header */
+
+.site-header {
+  padding: 22px 6%;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--dark-pink);
+}
+
+.logo-heart {
+  color: var(--pink);
+  font-size: 1.3rem;
+}
+
+.nav-button {
+  padding: 11px 20px;
+
+  border-radius: 50px;
+
+  background: var(--white);
+
+  color: var(--dark-pink);
+
+  font-weight: 600;
+
+  box-shadow: 0 8px 25px rgba(139, 23, 69, 0.08);
+
+  transition: 0.25s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Button */
+
+.primary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 25px;
+
+  border-radius: 50px;
+
+  background: var(--pink);
+  color: white;
+
+  font-weight: 700;
+
+  box-shadow: 0 12px 25px rgba(244, 91, 138, 0.28);
+
+  transition: 0.25s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 16px 30px rgba(244, 91, 138, 0.35);
+}
+
+/* Hero */
+
+.hero {
+  max-width: 1200px;
+
+  min-height: 650px;
+
+  margin: auto;
+
+  padding: 70px 6%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.eyebrow {
+  color: var(--pink);
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+
+  color: var(--dark-pink);
+}
+
+.hero h1 span {
+  display: block;
+
+  color: var(--pink);
+}
+
+.hero-description {
+  max-width: 500px;
+
+  margin: 25px 0 32px;
+
+  font-size: 1.1rem;
+
+  color: var(--muted);
+}
+
+/* Hero Visuals */
+
+.hero-visual {
+  min-height: 500px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.birthday-card {
+  width: min(380px, 90%);
+
+  aspect-ratio: 0.8;
+
+  background: white;
+
+  border-radius: 40px;
+
+  box-shadow: var(--shadow);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transform: rotate(3deg);
+}
+
+.birthday-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  background: var(--light-pink);
+
+  border-radius: 50%;
+
+  top: -100px;
+  right: -80px;
+}
+
+.card-small-text {
+  color: var(--pink);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  position: relative;
+}
+
+.birthday-card h2 {
+  margin-top: 8px;
+
+  font-size: 2rem;
+
+  color: var(--dark-pink);
+
+  position: relative;
+}
+
+.cake {
+  font-size: 7rem;
+
+  margin: 25px 0;
+
+  position: relative;
+
+  animation: cakeFloat 3s ease-in-out infinite;
+}
+
+.card-hearts {
+  color: var(--pink);
+
+  letter-spacing: 8px;
+
+  position: relative;
+}
+
+.card-confetti {
+  color: #f6c453;
+
+  font-size: 2rem;
+
+  position: absolute;
+
+  top: 35px;
+  left: 45px;
+}
+
+/* Balloons */
+
+.balloon {
+  width: 60px;
+  height: 75px;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.balloon::after {
+  content: "";
+
+  width: 1px;
+  height: 80px;
+
+  background: #c98da3;
+
+  position: absolute;
+
+  top: 70px;
+  left: 50%;
+}
+
+.balloon-one {
+  background: #f45b8a;
+
+  top: 50px;
+  left: 5%;
+}
+
+.balloon-two {
+  background: #d9a7f5;
+
+  bottom: 50px;
+  right: 4%;
+
+  animation-delay: 1s;
+}
+
+/* Floating hearts */
+
+.floating-heart {
+  position: absolute;
+
+  color: var(--pink);
+
+  font-size: 2rem;
+
+  animation: float 3s ease-in-out infinite;
+}
+
+.heart-one {
+  top: 15%;
+  right: 8%;
+}
+
+.heart-two {
+  bottom: 20%;
+  left: 8%;
+
+  animation-delay: 1s;
+}
+
+.heart-three {
+  top: 35%;
+  left: 2%;
+
+  font-size: 1.2rem;
+
+  animation-delay: 0.5s;
+}
+
+/* Features */
+
+.features {
+  padding: 100px 6%;
+
+  background: white;
+}
+
+.section-heading {
+  max-width: 650px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.section-heading h2 {
+  color: var(--dark-pink);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.15;
+
+  margin-bottom: 18px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+.feature-grid {
+  max-width: 1100px;
+
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 35px;
+
+  border-radius: var(--radius-large);
+
+  background: var(--soft-pink);
+
+  text-align: center;
+
+  transition: 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 22px;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.feature-card h3 {
+  color: var(--dark-pink);
+
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: var(--muted);
+
+  font-size: 0.95rem;
+}
+
+/* How it works */
+
+.how-it-works {
+  padding: 100px 6%;
+}
+
+.steps {
+  max-width: 1000px;
+
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 50px;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-number {
+  display: inline-flex;
+
+  width: 55px;
+  height: 55px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--light-pink);
+
+  color: var(--pink);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.step h3 {
+  color: var(--dark-pink);
+
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: var(--muted);
+}
+
+/* Final CTA */
+
+.final-cta {
+  margin: 40px 6% 100px;
+
+  padding: 90px 30px;
+
+  border-radius: 40px;
+
+  background: linear-gradient(135deg, #ffe4ed, #fff3f7);
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.final-cta h2 {
+  color: var(--dark-pink);
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+
+  margin-bottom: 15px;
+}
+
+.final-cta p {
+  color: var(--muted);
+
+  margin-bottom: 30px;
+}
+
+.cta-decoration {
+  position: absolute;
+
+  top: 25px;
+  right: 10%;
+
+  color: var(--pink);
+
+  font-size: 3rem;
+
+  transform: rotate(15deg);
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 30px 6%;
+
+  border-top: 1px solid #f6dce5;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+}
+
+/* Animations */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes cakeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* responsive design focusing on TABLET */
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    margin: auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    min-height: 450px;
+  }
+
+  .feature-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    max-width: 500px;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .step {
+    max-width: 500px;
+
+    margin: auto;
+  }
+}
+
+/* responsive design focusing on MOBILE */
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 18px 5%;
+  }
+
+  .nav-button {
+    padding: 9px 15px;
+
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    min-height: auto;
+
+    padding: 50px 5% 70px;
+
+    gap: 30px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  .birthday-card {
+    width: 290px;
+  }
+
+  .cake {
+    font-size: 5rem;
+  }
+
+  .features,
+  .how-it-works {
+    padding: 70px 5%;
+  }
+
+  .final-cta {
+    margin: 20px 5% 70px;
+
+    padding: 70px 20px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 8px;
+  }
+}
