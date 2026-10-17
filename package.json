@@ -1,0 +1,22 @@
+{
+  "name": "4luv",
+  "version": "1.0.0",
+  "description": "Make Someone's Birthday Extra Special - A beautiful personalized birthday wish creator",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "birthday",
+    "wishes",
+    "greetings",
+    "personalized"
+  ],
+  "author": "Mithun-ksd",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
